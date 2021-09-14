@@ -1,0 +1,240 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    height: 200px;
+}
+
+header h1 {
+    margin-bottom: 20px;
+    font-weight: 200;
+    font-size: 48px;
+}
+
+header p {
+    font-size: 20px;
+}
+
+main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 34px;
+    font-weight: 200;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.transactions {
+    width: 1000px;
+}
+
+.transactions h3 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 26px;
+}
+
+.transactions__list {
+    display: flex;
+}
+
+.transactions__incomeArea,
+.transactions__exspensesArea {
+    margin: 0 20px;
+    padding: 20px;
+    width: 50%;
+    border: 1px solid black;
+}
+
+.transactions__incomeArea h3,
+.transactions__incomeArea .transaction__amount {
+    color: rgb(36, 153, 36);
+    font-weight: normal;
+}
+
+.transactions__exspensesArea h3,
+.transactions__exspensesArea .transaction__amount {
+    color: rgb(218, 63, 63);
+    font-weight: normal;
+}
+
+.transation {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid rgb(124, 119, 119);
+}
+
+.transation:last-child {
+    border-bottom: none;
+}
+
+.transation__name {
+    font-size: 20px;
+}
+
+.transation__name i {
+    margin-right: 10px;
+}
+
+.btnDelete {
+    margin-left: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform .3s
+}
+
+.btnDelete:hover {
+    transform: scale(.8);
+}
+
+.options {
+    width: 500px;
+    padding: 60px 30px;
+    border: 1px solid black;
+}
+
+.money__avaliable {
+    margin-top: -10px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.controls {
+    display: flex;
+    margin: 30px 0;
+    justify-content: space-around;
+}
+
+.controls__btn {
+    padding: 10px 20px;
+    background: transparent;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: color .3s, background .3s;
+}
+
+.controls__btn i {
+    margin-right: 5px;
+}
+
+.controls__btn:hover {
+    color: #fff;
+    background: black;
+}
+
+.styleSelection {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.styleSelectionBox__btn {
+    margin: 0 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform .3s;
+}
+
+.styleSelectionBox__btn:hover {
+    transform: scale(.9);
+}
+
+.styleSelectionBox__btn--light {
+    background: #fff;
+    border: 1px solid grey;
+}
+
+.styleSelectionBox__btn--dark {
+    background: grey;
+    border: 1px solid #fff;
+}
+
+.addTransactionPanel {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-image: linear-gradient(315deg, rgb(97, 88, 88) 0%, rgb(114, 110, 110) 75%);
+}
+
+.addTransactionPanel label {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 26px;
+}
+
+.addTransactionPanel small {
+    margin-bottom: 5px;
+    font-style: italic;
+    color: rgb(224, 215, 215);
+}
+
+.addTransactionPanel input,
+.addTransactionPanel select {
+    width: 800px;
+}
+
+.addTransactionPanel input,
+.addTransactionPanel select,
+.addTransactionPanel button {
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.addTransactionPanel input,
+.addTransactionPanel select,
+.addTransactionPanel option {
+    font-size: 16px;
+}
+
+.panelButtons {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.panelButtons .panelButtons__btn {
+    margin: 0 30px;
+    padding: 15px 40px;
+    font-size: 18px;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color .3;
+}
+
+.panelButtons .panelButtons__btn:hover {
+    background-color: #000;
+}

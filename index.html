@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Wallet</title>
+    <script src="https://kit.fontawesome.com/972c459d7e.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1><i class="fas fa-wallet"></i>Wallet</h1>
+        <p>Osobisty menadżer finansów.</p>
+    </header>
+
+    <main>
+        <section class="transactions">
+            <h2 class="transactions__title">Lista transakcji</h2>
+            <div class="transactions__list">
+                <div class="transactions__incomeArea">
+                    <h3>Przychód</h3>
+                    <div class="transation" id="1">
+                        <p class="transation__name"><i class="fas fa-money-bill-wave"></i>Wypłata</p>
+                        <p class="transaction__amount">4000 zł <button class="btnDelete"><i class="fas fa-times"></i></button>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="transactions__exspensesArea">
+                    <h3>Wydatki</h3>
+                    <div class="transation" id="1">
+                        <p class="transation__name"><i class="fas fa-file-invoice-dollar"></i>Rachunki</p>
+                        <p class="transaction__amount">2000 zł <button class="btnDelete"><i class="fas fa-times"></i></button>
+                        </p>
+                    </div>
+                    <div class="transation" id="2">
+                        <p class="transation__name"><i class="fas fa-gifts"></i>Hobby</p>
+                        <p class="transaction__amount">1200 zł <button class="btnDelete"><i class="fas fa-times"></i></button>
+                        </p>
+                    </div>
+                    <div class="transation" id="3">
+                        <p class="transation__name"><i class="fas fa-piggy-bank"></i>Oszczędności</p>
+                        <p class="transaction__amount">800 zł <button class="btnDelete"><i class="fas fa-times"></i></button>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="options">
+            <div class="money">
+                <h2>Dostępne środki:</h2>
+                <p class="money__avaliable">0zł</p>
+            </div>
+            <div class="controls">
+                <button class="controls__btn controls__btn--addTransation"><i class="fas fa-plus"></i>Dodaj transakcję</button>
+                <button class="controls__btn controls__btn--deleteTransation"><i class="fas fa-trash-alt"></i>Usuń wszystko</button>
+            </div>
+            <div class="styleSelection">
+                <h2>Wybierz styl:</h2>
+                <div class="styleSelectionBox">
+                    <button class="styleSelectionBox__btn styleSelectionBox__btn--light"></button>
+                    <button class="styleSelectionBox__btn styleSelectionBox__btn--dark"></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="addTransactionPanel">
+        <h2>Dodaj nową transakcję</h2>
+
+        <label for="name">Nazwa:</label>
+        <small>( podaj nazwę transakcji )</small>
+        <input type="text" id="name">
+
+        <label for="amount">Kwota:</label>
+        <small>( podaj kwotę transakcji, jeżeli jest to wydatek dodaj minus przed kwotą )</small>
+        <input type="text" id="amount">
+
+        <label for="category">Kategoria:</label>
+        <small>( [ + ] przychód, [ - ] wydatek )</small>
+        <select id="category">
+            <option value="none"selected disabled></option>
+            <option value="income"> [ + ] Przychód</option>
+            <option value="shopping"> [ - ] Jedzenie</option>
+            <option value="hobby"> [ - ] Hobby</option>
+            <option value="saves"> [ - ] Oszczędności</option>
+        </select>
+
+        <div class="panelButtons">
+            <button class="panelButtons__btn panelButtons__btn--save"><i class="far fa-save"></i> Zapisz</button>
+            <button class="panelButtons__btn panelButtons__btn--cancel"><i class="far fa-window-close"></i> Anuluj</button>
+        </div>
+    </div>
+</body>
+
+</html>
