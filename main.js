@@ -28,8 +28,38 @@ const cancelTransaction = () => {
     addTransactionPanel.style.display = 'none';
 }
 
+const lightColor = () => {
+    document.body.style.background = '#fefefe';
+    console.log('light');
+}
+const darkColor = () => {
+    document.body.style.background = '#1a1919'
+}
+
+const saveBtn = () => {
+    let name = inputName.value;
+    let amount = inputAmount.value;
+    let select = selectCategory.value;
+
+    if (name != "" && amount != 0 && select != "none") {
+
+        cancelTransaction();
+        cancelBtn();
+    } else {
+        alert('Uzupełnij wszystkie pola');
+    }
+
+}
+
+const cancelBtn = () => {
+    inputName.value = "";
+    inputAmount.value = "";
+    selectCategory.value = "none";
+}
+
 btnCancel.addEventListener('click', cancelTransaction);
 addBtnTransaction.addEventListener('click', addTransaction);
-styleBtnLight.addEventListener('click', function (){
-    
-})
+styleBtnLight.addEventListener('click', lightColor);
+styleBtnDark.addEventListener('click', darkColor);
+btnSave.addEventListener('click', saveBtn);
+btnCancel.addEventListener('click', cancelBtn);

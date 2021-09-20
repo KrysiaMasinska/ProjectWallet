@@ -10,6 +10,10 @@ body {
     background-color: #fff;
 }
 
+.colorBody{
+    background-color: #1a1919;
+}
+
 header {
     display: flex;
     justify-content: center;
@@ -169,7 +173,7 @@ h2 {
 }
 
 .styleSelectionBox__btn--dark {
-    background: grey;
+    background: rgb(26, 25, 25);
     border: 1px solid #fff;
 }
 
