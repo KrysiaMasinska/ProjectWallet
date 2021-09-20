@@ -30,7 +30,6 @@ const cancelTransaction = () => {
 
 const lightColor = () => {
     document.body.style.background = '#fefefe';
-    console.log('light');
 }
 const darkColor = () => {
     document.body.style.background = '#1a1919'
