@@ -1,3 +1,8 @@
+:root {
+    --whiteColor: #fff;
+    --blackColor: #1a1919;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -7,11 +12,12 @@
 body {
     min-height: 100vh;
     font-family: 'Roboto', sans-serif;
-    background-color: #fff;
+    background-color: var(--whiteColor);
+    color: var(--blackColor);
 }
 
-.colorBody{
-    background-color: #1a1919;
+.colorBody {
+    background-color: var(--blackColor);
 }
 
 header {
@@ -106,7 +112,8 @@ h2 {
     border: none;
     font-size: 20px;
     cursor: pointer;
-    transition: transform .3s
+    transition: transform .3s;
+    color: var(--blackColor);
 }
 
 .btnDelete:hover {
@@ -116,7 +123,7 @@ h2 {
 .options {
     width: 500px;
     padding: 60px 30px;
-    border: 1px solid black;
+    border: 1px solid #000;
 }
 
 .money__avaliable {
@@ -134,7 +141,7 @@ h2 {
 .controls__btn {
     padding: 10px 20px;
     background: transparent;
-    border: 1px solid black;
+    border: 1px solid #000;
     cursor: pointer;
     transition: color .3s, background .3s;
 }
@@ -145,7 +152,7 @@ h2 {
 
 .controls__btn:hover {
     color: #fff;
-    background: black;
+    background: #000;
 }
 
 .styleSelection {
@@ -212,7 +219,7 @@ h2 {
 .addTransactionPanel select,
 .addTransactionPanel button {
     padding: 10px 20px;
-    border: 1px solid black;
+    border: 1px solid var(--blackColor);
     border-radius: 5px;
 }
 

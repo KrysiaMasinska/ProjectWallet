@@ -1,4 +1,9 @@
 const transactionsIncomeArea = document.querySelector('.transactions__incomeArea');
+const transation = document.querySelector('.transation');
+const transactionTemp = document.querySelector('.transactionTemp');
+const transationName = document.querySelector('.transation__name');
+const transactionAmount = document.querySelector('.transaction__amount');
+
 const transactionsExspensesArea = document.querySelector('.transactions__exspensesArea');
 const moneyAvaliable = document.querySelector('.money__avaliable');
 const addBtnTransaction = document.querySelector('.controls__btn--addTransation');
@@ -14,7 +19,7 @@ const inputName = document.querySelector('#name');
 const inputAmount = document.querySelector('#amount');
 const selectCategory = document.querySelector('#category');
 
-
+let root = document.documentElement;
 let id = 1;
 let categoryIcon;
 let selectedCategory;
@@ -29,10 +34,12 @@ const cancelTransaction = () => {
 }
 
 const lightColor = () => {
-    document.body.style.background = '#fefefe';
+    root.style.setProperty('--whiteColor', '#1a1919');
+    root.style.setProperty('--blackColor', '#fff');
 }
 const darkColor = () => {
-    document.body.style.background = '#1a1919'
+    root.style.setProperty('--blackColor', '#1a1919');
+    root.style.setProperty('--whiteColor', '#fff');
 }
 
 const saveBtn = () => {
@@ -41,7 +48,7 @@ const saveBtn = () => {
     let select = selectCategory.value;
 
     if (name != "" && amount != 0 && select != "none") {
-
+        incomeTransaction();
         cancelTransaction();
         cancelBtn();
     } else {
@@ -54,6 +61,17 @@ const cancelBtn = () => {
     inputName.value = "";
     inputAmount.value = "";
     selectCategory.value = "none";
+}
+
+const incomeTransaction = () =>{
+    const tempTrans = transactionTemp.content.cloneNode(true);
+    transation.setAttribute('id', id);
+    const sallaryName = transation.querySelector('.sallaryName');
+    tempTrans.querySelector('.sallaryName').textContent = inputName.value;
+    const sallary = transation.querySelector('.sallary');
+    tempTrans.querySelector('.sallary').textContent = inputAmount.value + ' zł';
+    transactionsIncomeArea.appendChild(tempTrans);
+    id++;
 }
 
 btnCancel.addEventListener('click', cancelTransaction);
