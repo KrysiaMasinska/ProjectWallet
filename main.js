@@ -77,6 +77,10 @@ const deleteAll = () =>  {
   deleteAllTransactions.forEach( el =>{
     el.remove();
   })
+  arrayMoney = [0];
+  inputAmount.value = 0;
+  arrayMoney.push(parseFloat(inputAmount.value));
+  moneyAvaliable.textContent = inputAmount.value;
 }
 
 const newTransaction = () => {
