@@ -26,15 +26,11 @@
             <div class="transactions__list">
                 <div class="transactions__incomeArea">
                     <h3>Przychód</h3>
-                    <!-- <div class="transation" id="1">
-                        <p class="transation__name"><i class="fas fa-money-bill-wave"></i>Wypłata</p>
-                        <p class="transaction__amount">4000 zł <button class="btnDelete"><i class="fas fa-times"></i></button>
-                        </p>
-                    </div> -->
                     <template class="transactionTemp">
-                        <div class="transation" id="1">
-                            <p class="transation__name"><i class="fas fa-money-bill-wave"></i><span class="sallaryName"></span></p>
-                            <p class="transaction__amount"><span class="sallary"></span><button class="btnDelete"><i class="fas fa-times"></i></button>
+                        <div class="transation">
+                            <p class="transation__name"><i class="icon"></i><span class="sallaryName"></span></p>
+                            <p class="transaction__amount"><span class="sallary"></span><button class="btnDelete"><i
+                                        class="fas fa-times"></i></button>
                             </p>
                         </div>
                     </template>
@@ -42,21 +38,14 @@
 
                 <div class="transactions__exspensesArea">
                     <h3>Wydatki</h3>
-                    <div class="transation" id="1">
-                        <p class="transation__name"><i class="fas fa-file-invoice-dollar"></i>Rachunki</p>
-                        <p class="transaction__amount">2000 zł <button class="btnDelete"><i class="fas fa-times"></i></button>
-                        </p>
-                    </div>
-                    <div class="transation" id="2">
-                        <p class="transation__name"><i class="fas fa-gifts"></i>Hobby</p>
-                        <p class="transaction__amount">1200 zł <button class="btnDelete"><i class="fas fa-times"></i></button>
-                        </p>
-                    </div>
-                    <div class="transation" id="3">
-                        <p class="transation__name"><i class="fas fa-piggy-bank"></i>Oszczędności</p>
-                        <p class="transaction__amount">800 zł <button class="btnDelete"><i class="fas fa-times"></i></button>
-                        </p>
-                    </div>
+                    <template class="transactionTemp">
+                        <div class="transation">
+                            <p class="transation__name"><i class="icon"></i> <span class="sallaryName"></span></p>
+                            <p class="transaction__amount"><span class="sallary"></span><button class="btnDelete"><i
+                                        class="fas fa-times"></i></button>
+                            </p>
+                        </div>
+                    </template>
                 </div>
 
             </div>
@@ -68,8 +57,10 @@
                 <p class="money__avaliable">0zł</p>
             </div>
             <div class="controls">
-                <button class="controls__btn controls__btn--addTransation"><i class="fas fa-plus"></i>Dodaj transakcję</button>
-                <button class="controls__btn controls__btn--deleteTransation"><i class="fas fa-trash-alt"></i>Usuń wszystko</button>
+                <button class="controls__btn controls__btn--addTransation"><i class="fas fa-plus"></i>Dodaj
+                    transakcję</button>
+                <button class="controls__btn controls__btn--deleteTransation"><i class="fas fa-trash-alt"></i>Usuń
+                    wszystko</button>
             </div>
             <div class="styleSelection">
                 <h2>Wybierz styl:</h2>
@@ -95,7 +86,7 @@
         <label for="category">Kategoria:</label>
         <small>( [ + ] przychód, [ - ] wydatek )</small>
         <select id="category">
-            <option value="none"selected disabled></option>
+            <option value="none" selected disabled></option>
             <option value="income"> [ + ] Przychód</option>
             <option value="shopping"> [ - ] Jedzenie</option>
             <option value="hobby"> [ - ] Hobby</option>
@@ -104,7 +95,8 @@
 
         <div class="panelButtons">
             <button class="panelButtons__btn panelButtons__btn--save"><i class="far fa-save"></i> Zapisz</button>
-            <button class="panelButtons__btn panelButtons__btn--cancel"><i class="far fa-window-close"></i> Anuluj</button>
+            <button class="panelButtons__btn panelButtons__btn--cancel"><i class="far fa-window-close"></i>
+                Anuluj</button>
         </div>
     </div>
 
